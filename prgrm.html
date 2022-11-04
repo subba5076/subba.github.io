@@ -109,5 +109,73 @@
             }
         }          
         </p>
+    <h1>two way comm</h1>
+    <p>EditText num1,num2;
+    Button send;
+    TextView res;
+    int n1,n2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        num1 = findViewById(R.id.num1);
+        num2 = findViewById(R.id.num2);
+        send = findViewById(R.id.send);
+        res = findViewById(R.id.res);
+
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                n1 = Integer.parseInt(num1.getText().toString());
+                n2 = Integer.parseInt(num2.getText().toString());
+                Intent i = new Intent(MainActivity.this,SecondActivity.class);
+                i.putExtra("num1",n1);
+                i.putExtra("num2",n2);
+                startActivityForResult(i,1);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode ==2){
+            int sum = data.getIntExtra("res",0);
+
+            res.setText("Result = "+sum);
+        }
+    }
+}</p>
+    <p>public class SecondActivity extends AppCompatActivity {
+    TextView num;
+    Button ret;
+    int n1,n2;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        num = findViewById(R.id.numbers);
+        ret = findViewById(R.id.ret);
+
+        Intent i1 = getIntent();
+        n1 = i1.getIntExtra("num1",0);
+        n2 = i1.getIntExtra("num2",0);
+
+        num.setText("Num1 = "+n1+" Num2 = "+n2);
+
+        ret.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent();
+                int res = n1+n2;
+                i2.putExtra("res",res);
+                setResult(2,i2);
+                finish();
+            }
+        });
+
+    }
+}</p>
 </body>
 </html>
