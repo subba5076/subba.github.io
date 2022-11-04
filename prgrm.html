@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calci</h1>
+    <p>
+        package com.example.optionmenuexample;
+
+        import androidx.annotation.NonNull;
+        import androidx.appcompat.app.AppCompatActivity;
+        
+        import android.os.Bundle;
+        import android.view.ContextMenu;
+        import android.view.Menu;
+        import android.view.MenuItem;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.TextView;
+        
+        //create new menu directory under resource (res)
+        //create an xml for menu (optionmenu)
+        public class MainActivity extends AppCompatActivity {
+        EditText n1,n2;
+        TextView tv;
+        Button b;
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_main);
+                n1=findViewById(R.id.num1);
+                n2=findViewById(R.id.num2);
+                tv = findViewById(R.id.res);
+                b=findViewById(R.id.context);
+                registerForContextMenu(b); //on click of which item do we want context menu
+            }
+        
+            @Override
+            public boolean onCreateOptionsMenu(Menu menu) {  //method to create option menu
+                getMenuInflater().inflate(R.menu.optionmenu,menu);   //access the xml from the menu folder we have created
+                return super.onCreateOptionsMenu(menu);
+            }
+        
+            @Override
+            public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        
+                float r;
+                float nm1 = Float.parseFloat(n1.getText().toString());
+                float nm2 = Float.parseFloat(n2.getText().toString());
+        
+                switch (id){
+                    case R.id.add: r= nm1+nm2;
+                    tv.setText(r+"");
+                        break;
+                    case R.id.sub:r= nm1-nm2;
+                        tv.setText(r+"");
+                        break;
+                    case R.id.mul:
+                        r= nm1*nm2;
+                        tv.setText(r+"");
+                        break;
+                    case R.id.div:r= nm1/nm2;
+                        tv.setText(r+"");
+                        break;
+                }
+                return super.onOptionsItemSelected(item);
+            }
+        
+            @Override
+            public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+                super.onCreateContextMenu(menu, v, menuInfo);
+                getMenuInflater().inflate(R.menu.optionmenu,menu);
+        
+            }
+        
+            @Override
+            public boolean onContextItemSelected(@NonNull MenuItem item) {
+        
+                int id = item.getItemId();
+        
+                float r;
+                float nm1 = Float.parseFloat(n1.getText().toString());
+                float nm2 = Float.parseFloat(n2.getText().toString());
+        
+                switch (id){
+                    case R.id.add: r= nm1+nm2;
+                        tv.setText(r+"");
+                        break;
+                    case R.id.sub:r= nm1-nm2;
+                        tv.setText(r+"");
+                        break;
+                    case R.id.mul:
+                        r= nm1*nm2;
+                        tv.setText(r+"");
+                        break;
+                    case R.id.div:r= nm1/nm2;
+                        tv.setText(r+"");
+                        break;
+                }
+        
+        
+                return super.onContextItemSelected(item);
+            }
+        }          
+        </p>
+</body>
+</html>
