@@ -177,5 +177,14 @@
 
     }
 }</p>
+    <h1>phone,call,brose</h1>
+    <p>
+        Intent i1 = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+pno.getText().toString()));
+                startActivity(i1);
+         Intent i2 = new Intent(Intent.ACTION_VIEW,Uri.parse(google.getText().toString()));
+                startActivity(i2);
+         Intent i3 = new Intent(Intent.ACTION_VIEW,Uri.parse("google.navigation:q="+place.getText().toString()));
+                startActivity(i3);
+    </p>
 </body>
 </html>
