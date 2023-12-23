@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackJums Movie Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 7vh;
+            padding: 0;
+background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+        }
+
+        .website-heading {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0; /* Adjust the margin for space below the title */
+            color: #333;
+        }
+
+        .movies-container {
+            display: flex;
+            
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+ 
+
+        }
+
+        .movie-container {
+             
+   	    text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+    	    background-color:rgba(255,255,255,0.4);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 250px;
+            width: 100%;
+            margin: 10px;
+        }
+  .movie-container:hover {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+     	    background-color:rgba(255,255,255,0.6);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            max-width: 250px;
+            width: 100%;
+            margin: 10px;
+        }
+
+        .movie-poster {
+            max-width: 100%;
+            height: 50vh;
+            border-radius: 8px;
+        }
+
+        .movie-name {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+.navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+border-radius: 10px;
+        }
+
+        .navbar-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-options {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-option {
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="navbar-title">TrackJums Choice (Movies)</div>
+    <div class="navbar-options">
+        <a href="#ser" class="navbar-option">Series</a>
+        <a href="#" class="navbar-option">Movies</a>
+    </div>
+</div>
+
+
+<div class="movies-container">
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Inception</div>
+ <div class="movie-name">Sci-Fi</div>
+    </div>
+
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMTg0NzkwMzQyMV5BMl5BanBnXkFtZTgwNDcxMTMyNzM@._V1_.jpg" alt="Movie 2 Poster">
+        <div class="movie-name">Happy Death Day 2U</div>
+	<div class="movie-name">Suspense | Thriller | Mystery</div>
+    </div>
+   <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Get Out</div>
+	<div class="movie-name">Suspense | Thriller | Mystery</div>
+    </div>
+
+<div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMjQ2NDMwMTY3MF5BMl5BanBnXkFtZTgwNDg5OTc1NjM@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="Movie 1 Poster">
+	<div class="movie-name">Escape Room</div>
+        <div class="movie-name">Thriller | Adventure</div>
+    </div></div>
+
+
+<div class="movies-container">
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BY2Y0ZWU1ZTItMDJlMy00YTdjLTg5Y2UtZWMyYjZhZWU4NmEyXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Escape Room 2</div>
+        <div class="movie-name">Thriller | Adventure</div>
+    </div>
+
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMjA1MTA4MzU4Ml5BMl5BanBnXkFtZTgwNjUxNjczODE@._V1_FMjpg_UX1000_.jpg" alt="Movie 2 Poster">
+        <div class="movie-name">The shallows</div>
+<div class="movie-name">Survival | Action | Adventure</div>
+    </div>
+   <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMjBkY2NkNjYtOGZmMy00MGMzLWFlODktZDNiYTM1ZjQ4OTBiXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Synchronic</div>
+	<div class="movie-name">Sci-Fi | Time Travel </div>
+    </div>
+
+<div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BY2NhNTc1OWYtODY0Zi00YjU1LTljNGItNTAzZjY5MjJlNDdmXkEyXkFqcGdeQXVyMTU0NTE4MTkz._V1_FMjpg_UX1000_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Predestination</div>
+<div class="movie-name">Time Tavel</div>
+    </div></div>
+
+
+ <!-- Add more movie containers as needed -->
+
+<div class="movies-container">
+    
+
+ <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Now You See Me</div>
+        <div class="movie-name">Magic</div>
+    </div>
+
+	<div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BYjhlNDljNTgtZjc4My00NmZmLTk2YzAtYWE5MDYwYjM4MTkzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Now You See Me 2</div>
+        <div class="movie-name">Magic</div>
+    </div>
+
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">The Prestige</div>
+        <div class="movie-name">Magic</div>
+    </div>
+
+
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BYmRkY2RhM2QtMjQwNC00NDVjLTk4MTQtZGNiMjYxMmJmODVhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_QL75_UX190_CR0,0,190,281_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Chronicle</div>
+        <div class="movie-name">Action | Adventure</div>
+    </div>
+
+
+    </div>
+
+
+ <!-- Add more movie containers as needed -->
+<div class="navbar">
+    <div class="navbar-title">TrackJums Choice (Series)</div>
+    <div class="navbar-options">
+        <a href="#ser" class="navbar-option">Series</a>
+        <a href="#" class="navbar-option">Movies</a>
+    </div>
+</div>
+<div class="movies-container">
+    
+
+ <div class="movie-container" id="ser">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Breaking Bad</div>
+        <div class="movie-name">Drugs | Thriller</div>
+    </div>
+
+	<div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BZjIzNTkyNjktNDdmMy00MmI4LWFlN2MtNDllYTVhZjljNWFiXkEyXkFqcGdeQXVyMTAwMzM3NDI3._V1_FMjpg_UX1000_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">How to Sell Drugs Online(Fast)</div>
+        <div class="movie-name">Drugs | Thriller </div>
+    </div>
+
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/61AfqN8XdhL._AC_UF1000,1000_QL80_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">The Last Man on Earth</div>
+        <div class="movie-name">Comedy | Drama</div>
+    </div>
+
+
+    <div class="movie-container">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/M/MV5BNzI5MjUyYTEtMTljZC00NGI5LWFhNWYtYjY0ZTQ5YmEzMWRjXkEyXkFqcGdeQXVyMTY3MDE5MDY1._V1_.jpg" alt="Movie 1 Poster">
+        <div class="movie-name">Walking Dead</div>
+        <div class="movie-name">Horror | Thriller</div>
+    </div>
+
+
+    </div>
+
+
+
+</body>
+</html>
