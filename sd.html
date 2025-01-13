@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            background-color: #001f3f;
+            color: #ffffff;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .column {
+            width: 48%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .half-line {
+            border-top: 1px solid #ccc;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .aligned-radio-group {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px 15px;
+            align-items: center;
+        }
+
+        .next-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .next-button:hover {
+            background-color: #0056b3;
+        }
+        .contentleft{
+            margin:10px;
+        }
+        img{
+            height:30vh;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('name').addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^a-zA-Z]/g, '');
+            });
+            document.getElementById('middle-initial').addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^a-zA-Z]/g, '');
+            });
+            document.getElementById('last-name').addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^a-zA-Z]/g, '');
+            });
+            document.getElementById('matriculation').addEventListener('input', function(e) {
+                this.value = this.value.replace(/\D/g, '');
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1>WELCOME TO MY HOMEPAGE</h1>
+
+    <div class="form-container">
+        <div class="column">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Subrahmanya">
+            </div>
+
+            <div class="form-group">
+                <label for="middle-initial">Middle Initial:</label>
+                <input type="text" id="middle-initial" name="middle-initial" placeholder="Rajesh">
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Nayak">
+            </div>
+
+            <div class="form-group">
+                <label for="country">I am from:</label>
+                <select id="country" name="country">
+                    <option value="">Select Country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Åland Islands">Åland Islands</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Bouvet Island">Bouvet Island</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote D'ivoire">Cote D'ivoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Territories">French Southern Territories</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guernsey">Guernsey</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-bissau">Guinea-bissau</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                    <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jersey">Jersey</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                    <option value="Korea, Republic of">Korea, Republic of</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Macao">Macao</option>
+                    <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mayotte">Mayotte</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                    <option value="Moldova, Republic of">Moldova, Republic of</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                    <option value="New Caledonia">New Caledonia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niue">Niue</option>
+                    <option value="Norfolk Island">Norfolk Island</option>
+                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau">Palau</option>
+                    <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Pitcairn">Pitcairn</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russian Federation">Russian Federation</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Saint Helena">Saint Helena</option>
+                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                    <option value="Saint Lucia">Saint Lucia</option>
+                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                    <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                    <option value="Swaziland">Swaziland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Timor-leste">Timor-leste</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tokelau">Tokelau</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Viet Nam">Viet Nam</option>
+                    <option value="Virgin Islands, British">Virgin Islands, British</option>
+                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                    <option value="Wallis and Futuna">Wallis and Futuna</option>
+                    <option value="Western Sahara">Western Sahara</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="form-group">
+                <label for="matriculation">Matriculation:</label>
+                <input type="text" id="matriculation" name="matriculation" placeholder="100003104">
+            </div>
+
+            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <input type="text" id="semester" name="semester" placeholder="1">
+            </div>
+
+            <div class="form-group">
+                <label for="program">Program:</label>
+                <select id="program" name="program">
+                    <option value="">Select Program</option>
+                    <option value="international-business-administration">International Business Administration (B.A.)</option>
+                    <option value="business-information-systems">Business Information Systems (B.Sc.)</option>
+                    <option value="global-hospitality-management">Global Hospitality Management (B.A.)</option>
+                    <option value="international-management">International Management (M.A.)</option>
+                    <option value="creative-management">International Management - Focus on Creative Management (M.A.)</option>
+                    <option value="entrepreneurship">Entrepreneurship (M.A.)</option>
+                    <option value="renewable-energy">Engineering and International Business - Focus on Renewable Energy, Water and Waste Management (M.Eng.)</option>
+                    <option value="mobility-management">Engineering and Sustainable Technology Management - Focus on Mobility and Automotive Management (M.Eng.)</option>
+                    <option value="digital-industry">Engineering and Sustainable Technology Management - Focus on Digital Industry (M.Eng.)</option>
+                    <option value="digital-building">Engineering and Sustainable Technology Management - Focus on Digital Building Infrastructure (M.Eng.)</option>
+                    <option value="software-engineering">Software Engineering (M.Sc.)</option>
+                    <option value="cyber-security">Computer Science - Focus on Cyber Security (M.Sc.)</option>
+                    <option value="big-data-ai">Computer Science - Focus on Big Data and Artificial Intelligence (M.Sc.)</option>
+                    <option value="international-business-leadership">International Business and Leadership (M.A.)</option>
+                    <option value="hospitality-management-leadership">Hospitality Management and Leadership (M.A.)</option>
+                    <option value="general-management">General Management (MBA)</option>
+                    <option value="international-healthcare-management">International Healthcare Management (MBA)</option>
+                    <option value="international-mba-program">International MBA Program (MBA)</option>            </select>
+            </div>
+
+            <div class="form-group">
+                <label for="started">Started in:</label>
+                <input type="date" id="started" name="started">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>I heard about this graduate program from:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="source" value="media"> Media</label>
+            <label><input type="checkbox" name="source" value="ad"> Ad</label>
+            <label><input type="checkbox" name="source" value="agency"> Agency</label>
+            <label><input type="checkbox" name="source" value="other"> Other</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>When I finish my study, I will:</label>
+        <div class="aligned-radio-group">
+            <input type="radio" name="future" value="return">
+            <label>Return to my country</label>
+
+            <input type="radio" name="future" value="job">
+            <label>Find a job in Europe</label>
+
+            <input type="radio" name="future" value="training">
+            <label>Do the practical training and then decide</label>
+        </div>
+    </div>
+
+    <div class="half-line"></div>
+
+    <div class="form-group">
+        <label for="feedback">Feedback for the course:</label>
+        <textarea id="feedback" name="feedback" placeholder="The course content was great." 
+            style="width: 916px; box-sizing: border-box; height: 150px; margin: 0 auto; display: block;">The course content was great.</textarea>
+    </div>
+    
+    <div class="contentleft">
+        <hr><p><mark>PAGE 2</mark></p><hr>
+        <h3>I will write a paragraph for each methodology of <a href="https://www.geeksforgeeks.org/software-development-life-cycle-sdlc/">SDLC</a> There are many of them but I will suggest a few.</h3>
+        <p>My suggestion and reasons are as follows:</p>
+        <h3>A)V-Shaped Model:</h3><img src="pic1.png">
+        <p>The V-Shaped model builds on the Waterfall model, focusing on verification and validation at every step. Each development phase has a matching testing phase to catch errors early. This approach works well for projects with clear requirements like embedded systems or safety critical applications where detailed testing is crucial. Its structured process ensures high quality results making it a dependable choice for projects that prioritize quality.</p>
+       <h3>B)Waterfall Model</h3><img src="pic2.png">
+       <p>The Waterfall model follows a step by step process where one phase must finish before the next starts. It works best when project requirements are clear and unlikely to change like in government or large company systems. This model is easy to follow and ensures everything is well documented, making it suitable for small projects or teams needing a clear structure.</p>
+       <h3>C)Spiral Model</h3><img src="pic3.png">
+       <p>The Spiral model uses repeated cycles, or "spirals," for development. Each cycle involves planning, identifying risks, building the product, and reviewing it. This model is ideal for big projects with risks, like critical systems where safety is important. By finding and fixing risks early, the Spiral model helps ensure the project stays on track and problems are managed well.</p>
+       <h3>D)Agile Model (e.g., Extreme Programming - XP)</h3><img src="pic4.png">
+<p>Extreme Programming (XP) is an Agile approach where the focus is on constant communication, frequent updates, and adapting to changes. It includes practices like working in pairs, testing code often, and gathering feedback quickly. This method is great for fast-moving projects or when user needs might change, such as in startups or app development. XP helps deliver high-quality software that matches what users want.</p>
+  <hr>
+  <h3>Among so many SDLC methodologies the ones that are in the agile classification are better. Among Agile SDLC methods, I have also a few suggestions:</h3>  
+<p><h3>A)Feature-Driven Development (FDD)</h3>
+    Feature-Driven Development (FDD) is about creating software step by step by focusing on individual features. The process includes planning, listing features, designing, building, and reviewing. It’s a good choice for big projects where the work can be divided into small, clear tasks, helping the team make steady progress.
+    
+   <h3>B)Rapid Application Development (RAD)</h3>
+    Rapid Application Development (RAD) focuses on building software quickly by creating prototypes and improving them based on user feedback. This approach requires less upfront planning and starts with a working model early on. It works well for projects with tight deadlines and when users can give regular input during development.
+   <h3>Adaptive Software Development (ASD)</h3> 
+    Adaptive Software Development (ASD) is about flexibility and constant learning during the development process. Instead of strict plans, it focuses on adapting to changes and improving as the project progresses. ASD has three key phases: speculate, collaborate, and learn. It’s a good approach for complex projects where things can change quickly, as it allows the team to adjust and keep improving.
+    
+    <h3>Crystal Clear</h3>
+    Crystal Clear is a lightweight method for small teams working on simple to medium-complexity projects. It values communication, teamwork, and frequent delivery of working software. This approach encourages open discussions, quick feedback, and focusing on what the team needs to succeed. It works best when teams are small, close-knit, and can easily stay in sync with each other.
+
+<hr>
+<h3>In this course of Software Development and application course of <a href="https://www.srh-university.de/en/">SRH</a> we learn the followings:</h3>
+A)Software Development Lifecycles<br>
+B)C Programming<br>
+C)Data Structures in C<br>
+C)Website Development using HTML, CSS and JS 
+</p>
+<hr><p><mark>PAGE 3</mark></p><hr>
+<h3>I have used <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> in this webpage and there are 3 ways to include CSS in a webpage as follows:</h3>
+<p>
+    <b>a)External - </b>by using a link element to link to an external CSS file. <br>
+    <b>b)Internal - </b>by using a style element in the head section.<br>
+    <b>c)Inline - </b>by using the style attribute inside HTML elements.<br>
+   <br> <b>The reasons CSS used in a webpage are:</b><br>
+    1)styling purpouse<br>
+    2)Better user Experience<br>
+    3)Easy formating<br>
+    4)compatibility across multiple devices<br><br><br>
+    <b>We also use <a href="https://www.javascript.com/">Javascript</a> in webpage development. The main reasons are as follows:</b><br>
+    a)Improved responsiveness<br>
+    b)backend usage<br>
+    c)playing media files<br>
+    d)client side validation<br>
+
+    <br><br><b>Ive done this project myself and accept the consequences if found otherways</b><br>
+    You can reach me at: <textarea placeholder="subrahmanya.nayak66@gmail.com or 100003104@stud.srh-university.de">subrahmanya.nayak66@gmail.com or 100003104@stud.srh-university.de</textarea>
+
+</p>
+</div>
+
+  
+</body>
+</html>
