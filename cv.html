@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive CV</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: rgb(58, 222, 12);
+            font-family: monospace;
+            font-size: 20px;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+
+        /* Toolbar Row */
+        #toolbar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            padding: 10px 5%;
+            background-color: #111;
+            border-bottom: 1px solid #fff;
+        }
+
+        #toolbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #toolbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Row (Profile Pic + Name) */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 5%;
+            border-bottom: 1px solid #fff;
+        }
+
+        #profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+
+        #typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #fff;
+            animation: typing 4s steps(30, end), blink 0.8s step-end infinite;
+            font-size: 1.8rem;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-right-color: #fff;
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        /* Sections Style */
+       
+
+        h2 {
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        p, li {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: #fff;
+            border-radius: 10px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        .line {
+            position: absolute;
+            left: -20px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #fff;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 2s;
+        }
+
+        section.visible .line {
+            transform: scaleY(1);
+        }
+        section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    will-change: transform, opacity;
+}
+
+section.visible {
+    transform: scale(1.05) translateZ(0);
+    opacity: 1;
+}
+
+section:not(.visible) {
+    transform: scale(0.95) translateZ(0);
+    opacity: 0.6;
+    filter: brightness(80%);  /* Alternative to blur for better performance */
+}
+
+
+        img{
+            height: 25vh;
+            border-radius: 50%;
+            padding-bottom: 10vh;
+            margin-bottom: 10vh;
+        }
+        h1{
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Toolbar Row -->
+    <div id="toolbar">
+        <a href="CV.pdf" download="CV.pdf">📄 Download CV</a>
+        <a href="mailto:subrahmanya.nayak66@gmail.com">✉️ Email</a>
+        <a href="https://www.linkedin.com/in/subrahmanyanayak" target="_blank">🔗 LinkedIn</a>
+    </div>
+
+    <!-- Header Row -->
+    <header>
+        <div id="profile-pic"><img src="c:\Users\HP\Downloads\WhatsApp Image 2025-01-13 at 11.05.29 PM.jpeg"></div>
+        <h1 id="typewriter">Subrahmanya Rajesh Nayak</h1>
+    </header>
+
+    <!-- Sections -->
+    <section>
+        <div class="line"></div>
+        <h2>📍 Contact Information</h2>
+        <p>Location: Berlin, Germany</p>
+        <p>Email: <a href="mailto:subrahmanya.nayak66@gmail.com">subrahmanya.nayak66@gmail.com</a></p>
+        <p>Phone: +49 15510822620</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/subrahmanyanayak" target="_blank">linkedin.com/in/subrahmanyanayak</a></p>
+    </section>
+
+    <section>
+        <div class="line"></div>
+        <h2>💼 Work Experience</h2>
+        <ul>
+            <li>
+                <strong>Research Intern</strong>, National Institute of Technology Karnataka (Jan 2024 - Jun 2024)<br>
+                Conducted research on CAN intrusion detection methodologies using deep learning.
+            </li>
+            <li>
+                <strong>Full-Stack Developer Intern</strong>, Zephyr Technologies & Solutions (Aug 2022 - Sep 2022)<br>
+                Developed and maintained web applications using HTML, CSS, JavaScript, PHP, and SQL.
+            </li>
+            <li>
+                <strong>Mobile App and Front-End Developer Intern</strong>, RineX (May 2022 - Jun 2022)<br>
+                Developed mobile applications using java and web front end UI/UX using HTML, CSS, JavaScript, Figma.
+            </li>
+            <li>
+                <strong>Artificial Intelligence with Machine Learning Intern</strong>, Knowledge Solutioin of India (Feb 2021 - March 2021)<br>
+                Developed AI/ML models for different scenarios.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="line"></div>
+        <h2>🎓 Education</h2>
+        <ul>
+            <li>
+                <strong>Master's in Computer Science</strong>, SRH Berlin University of Applied Sciences (Oct 2024 - Present)<br>
+                Focus: Big Data and Artificial Intelligence
+            </li>
+            <li>
+                <strong>Bachelor's in Information Science Engineering</strong>, NMAM Institute of Technology (Jun 2020 - Aug 2024)<br>
+                Grade: 8.37 CGPA
+            </li>
+            <li>
+                <strong>Pre University(PCMS)</strong>, Karkala Jnanasudha PU College(May 2019 - Aug 2020)<br>
+                Grade: 92.3%
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="line"></div>
+        <h2>🚀 Projects</h2>
+        <ul>
+            <li>
+                <strong>CAN Intrusion Detection System</strong>: Designed and implemented a machine learning-based system for detecting anomalies in vehicle networks.
+            </li>
+            <li>
+                <strong>Cataract Detection</strong>: Developed a system for detecting cataracts using fundus and naked-eye images.
+            </li>
+            <li>
+                <strong>Computer vision and control</strong>: Developed a system for detecting and tracking certain object and its movements and triggering certain actions when movement is detected.
+                </li>
+                <li>
+                    <strong>Yoga app</strong>: Developed a user-friendly app in Java to support online yoga learners, featuring an audio/visual guide for
+                    performing various yoga exercises
+                </li>
+
+        </ul>
+    </section>
+
+    <script>
+       const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            requestAnimationFrame(() => {
+                entry.target.classList.add('visible');
+            });
+        } else {
+            requestAnimationFrame(() => {
+                entry.target.classList.remove('visible');
+            });
+        }
+    });
+}, { threshold: 0.4 });
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+
+    </script>
+</body>
+</html>
