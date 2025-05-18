@@ -50,6 +50,10 @@
       border-radius: 5px;
       cursor: pointer;
     }
+    .toggle-btn:hover{
+     transform: scale(1.0); /* smaller scale to avoid overflowing */
+  box-shadow: 0 0 20px #00e5ff;
+    }
 
     section {
       padding: 100px 20px;
@@ -321,17 +325,39 @@
   height: 80vh;
   border-radius: 10px;
 }
+.learn-btn {
+  padding: 2px 6px;
+  background-color: #00e5ff;
+  
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
+.learn-btn:hover {
+  background-color: #00e5ff;
+}
+.toggle-btn a{
+  color: #00e5ff;          /* Text color */
+  text-decoration: none;    /* Removes underline */
+  display: inline-block;    /* Makes it behave like a block inside button */
+  
+}
 
 
 
   </style>
 </head>
 <body>
-  <header>
-    <h1>Subrahmanya Nayak | AI/ML Developer</h1>
+<header>
+  <h1>Subrahmanya Nayak | AI/ML Developer</h1>
+  <div style="margin-left: auto; display: flex; gap: 10px; align-items: center;">
+    <button class="toggle-btn"><a href="Learn_with_me.html">Learn with Me</a></button>
     <button class="toggle-btn" onclick="document.body.classList.toggle('light-mode')">Toggle Theme</button>
-  </header>
+  </div>
+</header>
+
 
   <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1549921296-3a6bca6f90e0');">
     <img src="portfolio_pic.jpg" alt="Profile Picture" class="profile-pic" />
